@@ -1,0 +1,32 @@
+# Options to make tmux more pleasant
+set -g mouse on
+set -g default-terminal "tmux-256color"
+
+# Configure the catppuccin plugin
+set -g @catppuccin_flavor "mocha" # latte, frappe, macchiato, or mocha
+set -g @catppuccin_window_status_style "rounded" # basic, rounded, slanted, custom, or none
+run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
+
+
+set -q -g status-utf8 on
+set -g status-right '#(rainbarf)'
+# reload configuration
+bind r source-file ~/.tmux.conf \; display '~/.tmux.conf sourced'
+
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'erikw/tmux-powerline'
+set -g @plugin 'thewtex/tmux-mem-cpu-load'
+# Other examples:
+
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+#set-option -g status-utf8 on
+#set -g status-right '#(rainbarf)'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
