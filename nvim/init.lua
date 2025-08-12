@@ -12,6 +12,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.runtimepath:prepend(lazypath)
+vim.g.python3_host_prog = " /Users/dl/.pyenv/shims/python"
+
 
 require("vim-options")
 

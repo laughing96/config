@@ -8,7 +8,7 @@ return {
 				-- null_ls.builtins.formatting.prettier,
 				-- null_ls.builtins.diagnostics.erb_lint,
 				null_ls.builtins.diagnostics.clangd,
-				null_ls.builtins.formatting.clangd,
+				null_ls.builtins.formatting.clang_format,
 			},
 		})
 
